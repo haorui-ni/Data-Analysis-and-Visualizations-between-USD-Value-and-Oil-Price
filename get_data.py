@@ -53,6 +53,20 @@ def merge_dataset(csv_one, csv_two, col, merge_name):
     df_merge = df_one.merge(df_two, on = col)
     df_merge.to_csv(merge_name, index = False)
 
+def del_below_zero(csvname, col):
+    df = pd.read_csv(csvname)
+    df = df[(df[col] > 0)]
+    df.to_csv(csvname, index = False)
+
+def add_year_month(csvname):
+    df = pd.read_csv(csvname)
+    df['Date'] = pd.to_datetime(df['Date'])
+    df = df.set_index('Date')
+    df['Year'] = df.index.year
+    df['Month'] = df.index.month
+    df.to_csv(csvname)
+
+
 if __name__ == '__main__':
     download_usdindex_json("data/USD_index.json")
     convert_json_csv("data/USD_index.json", "data/USD_index.csv")
@@ -69,10 +83,16 @@ if __name__ == '__main__':
     check_null("data/tick_brent.csv")
 
     change_col_name("data/USD_index.csv", 'rowDate', 'Date')
+    change_col_name("data/tick_wti.csv", 'Adj Close', 'adj_close_wti')
+    change_col_name("data/tick_brent.csv", 'Adj Close', 'adj_close_brent')
+
+    del_below_zero("data/tick_wti.csv", 'adj_close_wti')
 
     merge_dataset("data/USD_index.csv", "data/tick_wti.csv", 'Date', "data/index_wti.csv")
     merge_dataset("data/USD_index.csv", "data/tick_brent.csv", 'Date', "data/index_brent.csv")
     merge_dataset("data/index_wti.csv", "data/tick_brent.csv", 'Date', "data/index_wti_brent.csv")
+
+    add_year_month("data/index_wti_brent.csv")
 
 
 
