@@ -1,3 +1,4 @@
+adjustText==0.7.3
 aiohttp @ file:///opt/concourse/worker/volumes/live/ba252660-e2b9-4a6d-6906-9be4ed7deda4/volume/aiohttp_1646806382603/work
 aiosignal @ file:///tmp/build/80754af9/aiosignal_1637843061372/work
 alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
@@ -28,6 +29,7 @@ backports.weakref==1.0.post1
 bcrypt @ file:///opt/concourse/worker/volumes/live/7540a0c1-471d-4a61-5243-0bfec3601197/volume/bcrypt_1607022666156/work
 beautifulsoup4 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_croot-cdiouih5/beautifulsoup4_1650462164803/work
 binaryornot @ file:///tmp/build/80754af9/binaryornot_1617751525010/work
+bioinfokit==2.1.0
 bitarray @ file:///opt/concourse/worker/volumes/live/39912a06-1fdd-4d60-40a6-aad1836148be/volume/bitarray_1648739520150/work
 bkcharts==0.2
 black==19.10b0
@@ -128,7 +130,7 @@ jedi @ file:///opt/concourse/worker/volumes/live/89be3eb0-a85c-453b-67dd-f706f2f
 Jinja2 @ file:///tmp/build/80754af9/jinja2_1612213139570/work
 jinja2-time @ file:///opt/conda/conda-bld/jinja2-time_1649251842261/work
 jmespath @ file:///Users/ktietz/demo/mc3/conda-bld/jmespath_1630583964805/work
-joblib @ file:///tmp/build/80754af9/joblib_1635411271373/work
+joblib==1.2.0
 json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
 jsonschema @ file:///opt/concourse/worker/volumes/live/4dfc22c3-c342-49fd-67d7-73b2208a33ed/volume/jsonschema_1650025962276/work
 jupyter @ file:///opt/concourse/worker/volumes/live/5d55c245-fcac-42f9-4a6c-7e147c07785b/volume/jupyter_1607700866889/work
@@ -141,6 +143,7 @@ jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_16014907206
 jupyterlab-server @ file:///opt/conda/conda-bld/jupyterlab_server_1644500396812/work
 jupyterlab-widgets @ file:///tmp/build/80754af9/jupyterlab_widgets_1609884341231/work
 kaggle==1.5.12
+kaleido==0.2.1
 keyring @ file:///opt/concourse/worker/volumes/live/33b3e085-74e6-4f7b-77a0-470eb43e69ae/volume/keyring_1638531366470/work
 kiwisolver @ file:///Users/builder/miniconda3/envs/prefect/conda-bld/kiwisolver_1638569885739/work
 lazy-object-proxy @ file:///opt/concourse/worker/volumes/live/a169db40-97bf-4f51-6893-dc751f705b7b/volume/lazy-object-proxy_1616529067444/work
@@ -152,6 +155,7 @@ Markdown @ file:///opt/concourse/worker/volumes/live/022ad249-0648-42f1-5668-a0c
 MarkupSafe @ file:///opt/concourse/worker/volumes/live/1bcf0940-5bf8-4171-61e3-2133f5885e8b/volume/markupsafe_1621528148241/work
 matplotlib @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_croot-hkd3cnd2/matplotlib-suite_1647506470899/work
 matplotlib-inline @ file:///tmp/build/80754af9/matplotlib-inline_1628242447089/work
+matplotlib-venn==0.11.7
 mccabe==0.6.1
 mistune @ file:///opt/concourse/worker/volumes/live/4217afd5-dad1-438d-6f79-e4992ccda0e5/volume/mistune_1607364880245/work
 mkl-fft==1.3.1
@@ -257,7 +261,7 @@ Rtree @ file:///opt/concourse/worker/volumes/live/18283f9b-719e-45b1-7f3a-937f49
 ruamel-yaml-conda @ file:///opt/concourse/worker/volumes/live/e81cf0fe-611a-498e-6e69-a7320057c1ac/volume/ruamel_yaml_1616016689696/work
 s3transfer @ file:///tmp/build/80754af9/s3transfer_1626435152308/work
 scikit-image @ file:///opt/concourse/worker/volumes/live/584d0455-dcb7-4cf1-5977-c077944180ee/volume/scikit-image_1648214186784/work
-scikit-learn @ file:///opt/concourse/worker/volumes/live/cffa5efe-beec-4a37-5774-350794e43990/volume/scikit-learn_1642617139916/work
+scikit-learn==1.2.0
 scikit-learn-intelex==2021.20220215.132722
 scipy @ file:///opt/concourse/worker/volumes/live/9284487f-601d-4bc3-5556-535c4949d341/volume/scipy_1641557769615/work
 Scrapy @ file:///opt/concourse/worker/volumes/live/87e33744-bf9b-430d-6c07-6bef340feb41/volume/scrapy_1646837793437/work
@@ -294,6 +298,7 @@ terminado @ file:///opt/concourse/worker/volumes/live/1e61dc32-e381-4730-4e5e-6c
 testpath @ file:///tmp/build/80754af9/testpath_1624638946665/work
 text-unidecode @ file:///Users/ktietz/demo/mc3/conda-bld/text-unidecode_1629401354553/work
 textdistance @ file:///tmp/build/80754af9/textdistance_1612461398012/work
+textwrap3==0.9.2
 threadpoolctl @ file:///Users/ktietz/demo/mc3/conda-bld/threadpoolctl_1629802263681/work
 three-merge @ file:///tmp/build/80754af9/three-merge_1607553261110/work
 tifffile @ file:///tmp/build/80754af9/tifffile_1627275862826/work
@@ -302,6 +307,9 @@ tldextract @ file:///opt/conda/conda-bld/tldextract_1646638314385/work
 toml @ file:///tmp/build/80754af9/toml_1616166611790/work
 tomli @ file:///tmp/build/80754af9/tomli_1637314251069/work
 toolz @ file:///tmp/build/80754af9/toolz_1636545406491/work
+torch==1.13.0
+torchaudio==0.13.0
+torchvision==0.14.0
 tornado @ file:///opt/concourse/worker/volumes/live/2c1a63a2-006b-48ee-56b9-0cfe8b4927f9/volume/tornado_1606942321278/work
 tqdm @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_6cb3db64-b7e1-4db2-ab0b-f944920e5367lekntvc5/croots/recipe/tqdm_1650891088614/work
 traitlets @ file:///tmp/build/80754af9/traitlets_1636710298902/work
