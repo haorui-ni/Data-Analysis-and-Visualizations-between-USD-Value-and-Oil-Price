@@ -62,18 +62,18 @@ if __name__ == '__main__':
     sta_model(df['last_close'], df['adj_close_wti'])
     sta_model(df['last_close'], df['adj_close_brent'])
 
-    reg_plot("../image/regression_model_wti", "adj_close_wti", " (WTI)", "USD index value", "WTI crude oil price")
-    reg_plot("../image/regression_model_brent", "adj_close_brent", " (Brent)", "USD index value", "Brent crude oil price")
+    reg_plot("../result/regression_model_wti", "adj_close_wti", " (WTI)", "USD index value", "WTI crude oil price")
+    reg_plot("../result/regression_model_brent", "adj_close_brent", " (Brent)", "USD index value", "Brent crude oil price")
 
 
     hdline = ['year', 'co_co']
     createcsv("../data/cor_year_wti.csv", hdline)
     correlation_yearly("../data/cor_year_wti.csv", "adj_close_wti")
-    correlation_yearly_plot("../data/cor_year_wti.csv", "../image/correlation_yearly_wti", " (WTI)")
+    correlation_yearly_plot("../data/cor_year_wti.csv", "../result/correlation_yearly_wti", " (WTI)")
 
     createcsv("../data/cor_year_brent.csv", hdline)
     correlation_yearly("../data/cor_year_brent.csv", "adj_close_brent")
-    correlation_yearly_plot("../data/cor_year_brent.csv", "../image/correlation_yearly_brent", " (Brent)")
+    correlation_yearly_plot("../data/cor_year_brent.csv", "../result/correlation_yearly_brent", " (Brent)")
 
 
 
