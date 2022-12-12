@@ -44,6 +44,7 @@ def sta_model(iv, dv):
     print(reg_model.summary())
 
 def reg_plot(savename, col, title, xlabel, ylabel):
+    df = pd.read_csv("../data/index_wti_brent.csv")
     sns.set(rc={'figure.figsize': (7, 5)})
     sns.regplot(x='last_close', y=col,
                 data=df, scatter_kws={'s': 5}, line_kws={"color": "orange"})
@@ -57,7 +58,6 @@ if __name__ == '__main__':
     # correlation coefficient from 2013 to 2022
     df = pd.read_csv("../data/index_wti_brent.csv")
     pearson_correlation(df["last_close"], df["adj_close_wti"])
-
 
     sta_model(df['last_close'], df['adj_close_wti'])
     sta_model(df['last_close'], df['adj_close_brent'])
