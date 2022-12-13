@@ -67,32 +67,5 @@ def add_year_month(csvname):
     df.to_csv(csvname)
 
 
-if __name__ == '__main__':
-    download_usdindex_json("../data/USD_index.json")
-    convert_json_csv("../data/USD_index.json", "../data/USD_index.csv")
-
-    download_oil_csv('CL=F', '2013-01-01', '2022-11-22', '1d', "../data/tick_wti.csv")
-    download_oil_csv('BZ=F', '2013-01-01', '2022-11-22', '1d', "../data/tick_brent.csv")
-
-    col = ['direction_color', 'rowDateRaw', 'rowDateTimestamp', 'volume', 'volumeRaw', 'last_closeRaw',
-           'last_openRaw', 'last_maxRaw', 'last_minRaw', 'change_precentRaw']
-    drop_column("../data/USD_index.csv", col)
-
-    check_null("../data/USD_index.csv")
-    check_null("../data/tick_wti.csv")
-    check_null("../data/tick_brent.csv")
-
-    change_col_name("../data/USD_index.csv", 'rowDate', 'Date')
-    change_col_name("../data/tick_wti.csv", 'Adj Close', 'adj_close_wti')
-    change_col_name("../data/tick_brent.csv", 'Adj Close', 'adj_close_brent')
-
-    del_below_zero("../data/tick_wti.csv", 'adj_close_wti')
-
-    merge_dataset("../data/USD_index.csv", "../data/tick_wti.csv", 'Date', "../data/index_wti.csv")
-    merge_dataset("../data/USD_index.csv", "../data/tick_brent.csv", 'Date', "../data/index_brent.csv")
-    merge_dataset("../data/index_wti.csv", "../data/tick_brent.csv", 'Date', "../data/index_wti_brent.csv")
-
-    add_year_month("../data/index_wti_brent.csv")
-
 
 

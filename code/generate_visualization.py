@@ -206,25 +206,3 @@ def slider_time_plot(csvname, savename):
     fig.write_html(savename)
 
 
-if __name__ == '__main__':
-    cols = ['last_close', 'adj_close_wti', 'adj_close_brent']
-    ylabels = ['USD index', 'WTI oil price', 'Brent oil price']
-
-    time_visual("../data/USD_index.csv", "../data/tick_wti.csv", "../data/tick_brent.csv", "Date", "../result/time_series_plot")
-
-    boxplot_time("../data/index_wti_brent.csv", cols, ylabels, "../result/boxplot")
-
-    heat_map("../data/index_wti_brent.csv", cols[0], "USD index heatmap", "../result/usd_index_heatmap")
-    heat_map("../data/index_wti_brent.csv", cols[1], "WTI oil heatmap", "../result/wti_heatmap")
-    heat_map("../data/index_wti_brent.csv", cols[2], "Brent oil heatmap", "../result/brent_heatmap")
-
-    resample_timeseries("../data/index_wti_brent.csv", cols, '2021-11', '2022-11', "../result/resampel_plot_2122")
-
-    every_year("../data/index_wti_brent.csv", cols[0], "USD Index Yearly Data", "Month", ylabels[0],
-               "../result/usd_index_yearly_plot")
-    every_year("../data/index_wti_brent.csv", cols[1], "WTI Crude Oil Yearly Data", "Month", ylabels[1],
-               "../result/wti_yearly_plot")
-    every_year("../data/index_wti_brent.csv", cols[1], "Brent Crude Oil Yearly Data", "Month", ylabels[2],
-               "../result/brent_yearly_plot")
-
-    slider_time_plot("../data/index_wti_brent.csv", "../result/slider.html")

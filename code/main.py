@@ -77,3 +77,9 @@ if __name__ == '__main__':
                "../result/brent_yearly_plot")
 
     slider_time_plot("../data/index_wti_brent.csv", "../result/slider.html")
+
+    # LSTM prediction
+    lstm_predict("../data/USD_index.csv", "../result/USD_index_value_prediction", "%b %d, %Y", ["last_open", "last_max", "last_min", "change_precent"],
+                 "USD index value", "Prediction on USD index value")
+    lstm_predict("../data/tick_brent.csv", "../result/Brent_oil_price_prediction", "%Y-%m-%d", ["Open", "High", "Low", "Close", "Volume"], "Brent oil price",
+                 "Prediction on Brent oil price")
