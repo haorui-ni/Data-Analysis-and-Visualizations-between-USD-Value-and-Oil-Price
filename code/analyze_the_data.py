@@ -5,12 +5,6 @@ import csv
 import seaborn as sns
 import numpy as np
 import statsmodels.api as sm
-import os
-import datetime
-import math
-from pylab import rcParams
-import warnings
-import itertools
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM

@@ -2,8 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import pandas as pd
-import matplotlib.dates as mdates
-import kaleido
 import plotly.graph_objects as go
 
 def time_visual(csv_one, csv_two, csv_three, col, savename):
